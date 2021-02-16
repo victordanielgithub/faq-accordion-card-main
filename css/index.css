@@ -1,0 +1,51 @@
+:root {
+	--soft-violet: hsl(273, 75%, 66%);
+	--soft-blue: hsl(240, 73%, 65%);
+}
+* {
+	/* border: solid 1px black; */
+}
+
+body {
+	margin: 0px;
+	background: linear-gradient(
+		to bottom,
+		hsl(273, 75%, 66%),
+		hsl(240, 73%, 65%)
+	);
+	background-repeat: no-repeat;
+	height: 100vh; /* use todo el alto de la pantalla */
+	display: flex;
+	align-items: center; /* al medio de arriba hacia abajo */
+	justify-content: center;
+}
+
+.card_ {
+	background-color: white;
+	height: 510px; /* alto del card */
+	width: 900px; /* ancho del card */
+	border-radius: 20px; /*  */
+	margin: 0px;
+	overflow: hidden; /*para que el contenido del card no se salga... desvordamiento... se oculta */
+	background-image: url('../images/bg-pattern-desktop.svg');
+	background-repeat: no-repeat;
+	background-position: left -580px top -300px, right -20% bottom 250%;
+}
+
+.imagen1 {
+	width: auto;
+	height: auto;
+	margin-left: -80px;
+	margin-top: 60px;
+}
+.imagen2 {
+	position: absolute;
+	margin-left: -520px;
+	margin-top: 190px;
+}
+
+.texto {
+	background-color: rebeccapurple;
+	width: 100%;
+	height: 200px;
+}
