@@ -1,0 +1,239 @@
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+// variables de color text
+$very-dark-desaturated-blue: hsl(238, 29%, 16%);
+$soft-red: hsl(14, 88%, 65%);
+// variables de color background
+$soft-violet: hsl(273, 75%, 66%);
+$soft-blue: hsl(240, 73%, 65%);
+$grey: #bbbbbb;
+$link-normal: black;
+$link-visited: blue;
+$link-active: #0f0;
+$link-hover: red;
+$bacground-movil: '../images/bg-pattern-mobile.svg';
+// variables para margenes del card
+$card-margin-top: 130px;
+$card-margin-button: 0;
+$card-height: 500px;
+$card-width: 330px;
+// variables para margenes del container
+$container-width: 375px;
+$container-height: 770px;
+
+body {
+	// border: 1px solid red;
+	margin: 0px;
+	// font-size: 12px;
+	font-family: 'Kumbh Sans', sans-serif;
+}
+.container {
+	border: 1px solid black;
+	margin: 80px auto;
+	background: linear-gradient($soft-violet, $soft-blue);
+	width: $container-width;
+	height: $container-height;
+}
+.card {
+	border: 1px solid blue;
+	border-radius: 20px;
+	background-color: white;
+	height: $card-height;
+	width: $card-width;
+	margin: $card-margin-top auto $card-margin-button auto;
+	box-shadow: 2px 1px 2px rgb(29, 3, 146);
+}
+/***********************************************************/
+.card-images {
+	// border: 1px solid black;
+	margin: 0 auto;
+	height: 120px;
+	width: 270px;
+	position: relative;
+}
+.card-images .sombra {
+	// border: 1px solid red;
+	width: 270px;
+	height: 110px;
+	z-index: 2;
+	background-image: url('../images/bg-pattern-mobile.svg');
+	background-repeat: no-repeat;
+	background-position: center top;
+	position: absolute;
+}
+.card-images .img {
+	// border: 1px solid red;
+	width: 300px;
+	height: 200px;
+	margin: 0;
+	background-image: url('../images/illustration-woman-online-mobile.svg');
+	background-repeat: no-repeat;
+	background-position: center top;
+	position: absolute;
+	bottom: 30px;
+	right: 0px;
+}
+/***********************************************************/
+.card-article {
+	// border: 1px solid green;
+	margin: 0 auto;
+	width: 290px;
+	height: 350px;
+	padding: 0px;
+}
+/***********************************************************/
+.card-article .title {
+	// border: 1px solid red;
+	text-align: center;
+	font-weight: 900;
+	font-size: 2em;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+/***********************************************************/
+.accordion-container {
+	// border: 1px solid red;
+	border-bottom: 1px solid $grey;
+	width: 100%;
+	margin: 5px 0 10px 0;
+	clear: both;
+}
+.item-title {
+	position: relative;
+	display: block; /* <a/>: de display:inline a display:block */
+	padding: 10px 0px;
+	margin: 0px;
+	font-size: 0.9em;
+	color: #4e4c4c;
+}
+.item-img {
+	// border: 1px solid red;
+	float: right;
+	margin: auto 0px;
+}
+.item-content {
+	// border: 1px solid black;
+	font-size: 0.7em;
+	margin: 0px;
+	padding: 0%;
+	display: none;
+	color: #afabab;
+	letter-spacing: 0.05em;
+}
+.active + .item-content {
+	display: contents;
+}
+.item-img:hover {
+	transform: rotate(100deg);
+}
+.item-title.active {
+	font-weight: bold;
+}
+/***********************************************************/
+.attribution {
+	display: none;
+}
+
+@media screen and (min-width: 1440px) {
+	$bacground-movil: '../images/bg-pattern-desktop.svg';
+	body {
+		// border: 1px solid red;
+	}
+	.container {
+		// border: 1px solid red;
+		margin: 80px auto;
+		background: linear-gradient($soft-violet, $soft-blue);
+		width: 1440px;
+		height: 750px;
+	}
+	.card {
+		// border: 1px solid yellow;
+		width: 900px;
+		height: 500px;
+		margin: 110px auto;
+		background-image: url('../images/bg-pattern-desktop.svg');
+		background-repeat: no-repeat;
+		// position: absolute;
+		background-position: -560px -300px;
+	}
+	.card-images {
+		// border: 1px solid blue;
+		margin: 0px;
+		width: 400px;
+		height: 360px;
+		overflow: hidden; /*para que el contenido del card no se salga... desvordamiento... se oculta */
+	}
+	.card-images .sombra {
+		// border: 1px solid black;
+		width: 400px;
+		height: 380px;
+		z-index: 2;
+		background-image: none;
+		position: absolute;
+		background-position: right;
+	}
+	.card-images .img {
+		// border: 1px solid red;
+		width: 500px;
+		height: 400px;
+		background-image: url('../images/illustration-woman-online-desktop.svg');
+		position: absolute;
+		top: 0px;
+		right: -15px;
+		// right: -500px;
+	}
+	.dado {
+		// border: 1px solid red;
+		width: 110px;
+		height: 110px;
+		background-image: url('../images/illustration-box-desktop.svg');
+		background-repeat: no-repeat;
+		position: relative;
+		background-position: -40px 0px;
+		bottom: 220px;
+		right: 55px;
+	}
+	.grid {
+		margin-top: 60px;
+		display: grid;
+		// border: 1px solid red;
+		grid-template-columns: 1fr 1fr;
+		text-align: center;
+		padding-right: 40px;
+	}
+	// article {
+	// 	border: 1px solid blue;
+	// }
+	.card-article .title {
+		text-align: left;
+		margin-bottom: 30px;
+	}
+	.item-title {
+		position: relative;
+		text-align: left;
+		display: block; /* <a/>: de display:inline a display:block */
+		padding: 10px 0px;
+		margin: 0px;
+		font-size: 0.9em;
+		color: #4e4c4c;
+	}
+	.item-img {
+		// border: 1px solid red;
+		float: right;
+		margin: auto 0px;
+	}
+	.item-content {
+		// border: 1px solid black;
+		font-size: 0.8em;
+		text-align: left;
+	}
+	.card-article {
+		// border: 1px solid green;
+		margin: 0 auto;
+		width: 340px;
+		height: 360px;
+		padding-right: 0px;
+	}
+}

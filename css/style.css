@@ -1,0 +1,221 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.container {
+  border: 1px solid black;
+  margin: 80px auto;
+  background: linear-gradient(#af67e9, #6565e7);
+  width: 375px;
+  height: 770px;
+}
+
+.card {
+  border: 1px solid blue;
+  border-radius: 20px;
+  background-color: white;
+  height: 500px;
+  width: 330px;
+  margin: 130px auto 0 auto;
+  box-shadow: 2px 1px 2px #1d0392;
+}
+
+/***********************************************************/
+.card-images {
+  margin: 0 auto;
+  height: 120px;
+  width: 270px;
+  position: relative;
+}
+
+.card-images .sombra {
+  width: 270px;
+  height: 110px;
+  z-index: 2;
+  background-image: url("../images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  position: absolute;
+}
+
+.card-images .img {
+  width: 300px;
+  height: 200px;
+  margin: 0;
+  background-image: url("../images/illustration-woman-online-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  position: absolute;
+  bottom: 30px;
+  right: 0px;
+}
+
+/***********************************************************/
+.card-article {
+  margin: 0 auto;
+  width: 290px;
+  height: 350px;
+  padding: 0px;
+}
+
+/***********************************************************/
+.card-article .title {
+  text-align: center;
+  font-weight: 900;
+  font-size: 2em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/***********************************************************/
+.accordion-container {
+  border-bottom: 1px solid #bbbbbb;
+  width: 100%;
+  margin: 5px 0 10px 0;
+  clear: both;
+}
+
+.item-title {
+  position: relative;
+  display: block;
+  /* <a/>: de display:inline a display:block */
+  padding: 10px 0px;
+  margin: 0px;
+  font-size: 0.9em;
+  color: #4e4c4c;
+}
+
+.item-img {
+  float: right;
+  margin: auto 0px;
+}
+
+.item-content {
+  font-size: 0.7em;
+  margin: 0px;
+  padding: 0%;
+  display: none;
+  color: #afabab;
+  letter-spacing: 0.05em;
+}
+
+.active + .item-content {
+  display: contents;
+}
+
+.item-img:hover {
+  transform: rotate(100deg);
+}
+
+.item-title.active {
+  font-weight: bold;
+}
+
+/***********************************************************/
+.attribution {
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    margin: 80px auto;
+    background: linear-gradient(#af67e9, #6565e7);
+    width: 1440px;
+    height: 750px;
+  }
+
+  .card {
+    width: 900px;
+    height: 500px;
+    margin: 110px auto;
+    background-image: url("../images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: -560px -300px;
+  }
+
+  .card-images {
+    margin: 0px;
+    width: 400px;
+    height: 360px;
+    overflow: hidden;
+    /*para que el contenido del card no se salga... desvordamiento... se oculta */
+  }
+
+  .card-images .sombra {
+    width: 400px;
+    height: 380px;
+    z-index: 2;
+    background-image: none;
+    position: absolute;
+    background-position: right;
+  }
+
+  .card-images .img {
+    width: 500px;
+    height: 400px;
+    background-image: url("../images/illustration-woman-online-desktop.svg");
+    position: absolute;
+    top: 0px;
+    right: -15px;
+  }
+
+  .dado {
+    width: 110px;
+    height: 110px;
+    background-image: url("../images/illustration-box-desktop.svg");
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: -40px 0px;
+    bottom: 220px;
+    right: 55px;
+  }
+
+  .grid {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    padding-right: 40px;
+  }
+
+  .card-article .title {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  .item-title {
+    position: relative;
+    text-align: left;
+    display: block;
+    /* <a/>: de display:inline a display:block */
+    padding: 10px 0px;
+    margin: 0px;
+    font-size: 0.9em;
+    color: #4e4c4c;
+  }
+
+  .item-img {
+    float: right;
+    margin: auto 0px;
+  }
+
+  .item-content {
+    font-size: 0.8em;
+    text-align: left;
+  }
+
+  .card-article {
+    margin: 0 auto;
+    width: 340px;
+    height: 360px;
+    padding-right: 0px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
